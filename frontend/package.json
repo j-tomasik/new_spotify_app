@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development --watch",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  
+  },
+  "dependencies": {
+    "webpack-cli": "^4.2.0",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "react-router-dom": "^5.2.0",
+    "webpack": "^5.4.0"
+  }
+}

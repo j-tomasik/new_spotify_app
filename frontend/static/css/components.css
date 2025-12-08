@@ -1,0 +1,340 @@
+/* Component Styles - Material-UI Replacement */
+
+/* Container/Grid System */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container-item {
+  box-sizing: border-box;
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+.spacing-1 { gap: 8px; }
+.spacing-2 { gap: 16px; }
+.spacing-3 { gap: 24px; }
+.spacing-4 { gap: 32px; }
+.spacing-8 { gap: 64px; }
+.spacing-12 { gap: 96px; }
+
+/* Alignment */
+.align-center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1565c0;
+}
+
+.btn-secondary {
+  background-color: #dc004e;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #c51162;
+}
+
+.btn-default {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.btn-default:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  margin: 0.5em 0;
+  font-weight: 500;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+.text-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.text-secondary {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Text Field */
+.text-field {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.text-field:focus {
+  outline: none;
+  border-color: #1976d2;
+  border-width: 2px;
+  padding: 11px; /* Adjust for border width */
+}
+
+.text-field.error {
+  border-color: #f44336;
+}
+
+.text-field-helper {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.text-field-error {
+  color: #f44336;
+}
+
+/* Form Control */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-helper-text {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radio-group-row {
+  flex-direction: row;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.radio-label input[type="radio"] {
+  margin: 8px;
+  cursor: pointer;
+}
+
+.radio-label-text {
+  font-size: 0.875rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  padding: 16px;
+  margin: 16px;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #1976d2;
+  transition: width 0.3s ease;
+}
+
+/* Icon Button */
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.icon-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Alert */
+.alert {
+  padding: 16px;
+  border-radius: 4px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  width: 100%;
+}
+
+.alert-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.alert-error {
+  background-color: #f44336;
+  color: white;
+}
+
+.alert-close {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  margin-left: 16px;
+  opacity: 0.8;
+}
+
+.alert-close:hover {
+  opacity: 1;
+}
+
+/* Music Player Specific */
+.music-player {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2);
+  margin: 16px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.music-player-image {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.music-player-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.music-player-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Utility Classes */
+.full-width {
+  width: 100%;
+}
+
+.mt-12 {
+  margin-top: 48px;
+}
+
+.m-8 {
+  margin: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .music-player {
+    flex-direction: column;
+  }
+  
+  .music-player-image {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+}
+
