@@ -167,14 +167,6 @@ Create a `.env` file in the `backend/` directory with the following variables:
 - Database is SQLite (migrate to PostgreSQL for production)
 - CORS is configured to allow all origins in development
 
-## Migration from Django
-
-This application has been migrated from a Django/Python backend to Node.js/Express. Key changes:
-
-- Django models → JavaScript classes with SQLite queries
-- Django REST Framework → Express routes
-- Django sessions → express-session
-- Python Spotify utilities → JavaScript/axios
 
 ## Troubleshooting
 
