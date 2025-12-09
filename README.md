@@ -176,6 +176,5 @@ Create a `.env` file in the `backend/` directory with the following variables:
 - **Frontend not loading**: Ensure frontend has been built (`npm run build` in frontend directory)
 
 ## License
-
 ISC
 
