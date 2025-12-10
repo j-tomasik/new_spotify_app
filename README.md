@@ -69,9 +69,7 @@ new_spotify_app/
    ```
 
 6. Start the backend server:
-   ```bash
-   npm start
-   # Or for development with auto-reload:
+   ```
    npm run dev
    ```
 

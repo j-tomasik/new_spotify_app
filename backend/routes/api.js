@@ -72,6 +72,10 @@ router.post('/create-room', (req, res) => {
 });
 
 // Join room
+
+//req.session.room_code = code; I used server-side sessions insteads of JWTs because
+//for this simple use case the automatic cleanup is very useful.
+//ss-sessions works well with my "room membership" concept
 router.post('/join-room', (req, res) => {
   const { code } = req.body;
   

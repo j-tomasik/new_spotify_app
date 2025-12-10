@@ -4,6 +4,8 @@ const path = require('path');
 const dbPath = path.join(__dirname, '..', 'database.sqlite3');
 const db = new Database(dbPath);
 
+//collision handling, overkill but a good principle
+//simple approach, could use UUIDs or a more sophisticated algorithm if I want to scale
 function generateUniqueCode() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let code = '';

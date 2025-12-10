@@ -24,6 +24,8 @@ function isSpotifyAuthenticated(sessionId) {
   const expiry = new Date(tokens.expires_in);
   const now = new Date();
   
+
+  //token lifecycle management- access tokens expire, refresh tokens don't (usually)
   if (expiry <= now) {
     refreshSpotifyToken(sessionId);
   }
@@ -66,6 +68,8 @@ async function refreshSpotifyToken(sessionId) {
   }
 }
 
+//this boilerplate function is invoked by sub-methods as defined below to execute an API call to Spotify based 
+//on the args provided
 async function executeSpotifyApiRequest(sessionId, endpoint, method = 'GET', data = null) {
   const tokens = getUserTokens(sessionId);
   

@@ -245,5 +245,28 @@ router.post('/skip', async (req, res) => {
   }
 });
 
+//newly added
+router.post('/previous', async (req, res) => {
+  const roomCode = req.session.room_code;
+
+  if (!roomCode) {
+    return res.status(400).json({});
+  }
+
+  try {
+    const room = Room.findByCode(roomCode)
+
+    const isHost = req.sessionID === room.host
+
+    if (isHost) {
+      await previousSong(room.host)
+    }
+  } catch (error) {
+    console.log('error playing previous song', error);
+    res.status(500).json({error: "internal server error playing prev song"})
+  }
+  
+})
+
 module.exports = router;
 

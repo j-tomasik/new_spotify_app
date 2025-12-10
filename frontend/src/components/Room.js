@@ -160,6 +160,9 @@ export default class Room extends Component {
                     >
                         Leave Room
                     </button>
+                    <button onClick={()=> this.previousSong()}>
+                        Previous Song
+                    </button>
                 </div>
             </div>
         ) 
